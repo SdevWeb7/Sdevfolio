@@ -1,0 +1,74 @@
+.mail-modal {
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  min-width: 38rem;
+  background-color: white;
+  border-radius: .5rem;
+  box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 0 4px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  animation: apparitionModal .3s ease-in-out forwards;
+
+  h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  input, textarea {
+    font-size: 1.5rem;
+    resize: none;
+    padding: .5rem 1rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 0 4px 0;
+    margin-top: 2rem;
+  }
+  textarea {
+    min-height: 6rem;
+    max-height: 6rem;
+  }
+  span {
+    font-size: 1.2rem;
+    color: darkred;
+    text-align: center;
+  }
+
+  button {
+    margin-top: 2rem;
+  }
+  a {
+    align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 725px){
+  .mail-modal {
+    left: 10rem;
+    min-width: unset;
+    right: 10rem;
+  }
+}
+@media screen and (max-width: 552px){
+  .mail-modal {
+    left: 2rem;
+    min-width: unset;
+    right: 2rem;
+  }
+}
+
+@keyframes apparitionModal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+
+  }
+
+}
