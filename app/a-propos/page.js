@@ -6,5 +6,6 @@ export default function About () {
 
       <h2>À propos</h2>
 
+      <p>Voici mes créations</p>
    </main>
 }
