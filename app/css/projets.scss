@@ -1,0 +1,47 @@
+.projets {
+  text-align: center;
+
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .previous {
+    margin-right: 4rem;
+  }
+  .diapo-container {
+    display: flex;
+    transition: all .5s ease-in-out;
+
+    div {
+      min-width: 100%;
+    }
+  }
+  .fullstack, .frontend {
+    max-width: 500px;
+    margin: 2rem auto;
+    overflow: hidden;
+  }
+  p {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+  img {
+    border-radius: 1rem;
+  }
+  article div {
+    position: relative;
+  }
+  .code-source, .site-live {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    background-color: white;
+    box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
+    padding: .5rem 1rem;
+  }
+  .site-live {
+    right: unset;
+    left: 0;
+  }
+}

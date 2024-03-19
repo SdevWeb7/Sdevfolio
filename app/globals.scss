@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Pacifico&display=swap');
 
-html {font-size: 62.5%}
+html {font-size: 62.5%; scroll-behavior: smooth;}
 
 body {
   overflow-x: hidden;
@@ -33,7 +33,7 @@ body {
   }
   p {
     font-size: 2rem;
-    margin-bottom: 2rem;
+    text-align: center;
   }
   main {
     padding: 1rem;

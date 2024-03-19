@@ -1,16 +1,18 @@
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
   padding: 1rem 3rem;
-
+  z-index: 1000;
 
   ul {
     display: flex;
     gap: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   .nav-header {
@@ -38,12 +40,10 @@ header {
 
   a {
     font-size: 4rem;
-
-    &:hover { color: darkblue }
   }
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 525px) {
   header {
     .nav-header {
       display: block;

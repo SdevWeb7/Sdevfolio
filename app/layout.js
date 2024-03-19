@@ -2,6 +2,7 @@ import "./globals.scss";
 import { SocialNetwork } from "@/app/components/SocialNetwork";
 import { Header } from "@/app/components/Header";
 import { Toaster } from "react-hot-toast";
+import { ScrollToTopButton } from "@/app/components/ScrollToTopButton";
 
 
 export const metadata = {
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             <Toaster position={"bottom-right"} />
          </div>
 
+         <ScrollToTopButton />
       </body>
     </html>
   );
