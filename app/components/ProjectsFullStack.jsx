@@ -28,31 +28,20 @@ export function ProjectsFullStack () {
       <article
          style={{transform: `translateX(-${index * 100}%)`}}
          className="diapo-container">
-         <div className="youtube">
-            <p>Challenge du site web Front-end Mentor réalisé en full stack</p>
-            <img src="fullstack/youtube.jpg" alt="youtube"/>
-
-            <Link className={'code-source'} href={'#'}>Code Source</Link>
-
-            <h3>Technologies</h3>
-            <ul>
-               <li><strong>- NextJS:</strong> Next-Auth, Prisma, Server actions</li>
-               <li><strong>- SASS:</strong> imports, variables, animations</li>
-            </ul>
-
-            <h3>Fonctionnalités</h3>
-            <ul>
-               <li>Authentification (E-mail, Google et Github)</li>
-               <li>CRUD Vidéos avec react-hook-form + yup validation</li>
-               <li>Ajouter au favoris</li>
-               <li>Recherche</li>
-               <li>Dark/Light Mode</li>
-            </ul>
-         </div>
 
          <div className="sdevweb7">
             <p>Un de mes premiers portfolio</p>
             <img src="fullstack/sdevweb7.jpg" alt="sdevweb7"/>
+            <Link
+               className={'code-source'}
+               href={'https://github.com/SdevWeb7/sdevweb7'}
+               target={'_blank'}>
+                  Code Source</Link>
+            <Link
+               className={'site-live'}
+               href={'https://sdevweb.com/'}
+               target={'_blank'}>Site Live</Link>
+
             <h3>Technologies</h3>
             <ul>
                <li><strong>- Symfony:</strong> Authentification par JSON, Entities, Controllers, Repositories, EventListener, Intégration de React (+ React-Router), MessagesBus, Serializer, Twig, Yaml</li>
@@ -70,9 +59,40 @@ export function ProjectsFullStack () {
             </ul>
          </div>
 
+         <div className="youtube">
+            <p>Challenge du site web Front-end Mentor réalisé en full stack</p>
+            <img src="fullstack/youtube.jpg" alt="youtube"/>
+            <Link
+               className={'code-source'}
+               href={'https://github.com/SdevWeb7/Portfolio1'}
+               target={'_blank'}>
+               Code Source</Link>
+
+            <h3>Technologies</h3>
+            <ul>
+               <li><strong>- NextJS:</strong> Next-Auth, Prisma, Server actions</li>
+               <li><strong>- SASS:</strong> imports, variables, animations</li>
+            </ul>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+               <li>Authentification (E-mail, Google et Github)</li>
+               <li>CRUD Vidéos avec react-hook-form + yup validation</li>
+               <li>Ajouter au favoris</li>
+               <li>Recherche</li>
+               <li>Dark/Light Mode</li>
+            </ul>
+         </div>
+
          <div className="linksharing">
             <p>Challenge Front-end Mentor réalisé en Full-Stack</p>
             <img src="fullstack/linksharing.jpg" alt="linksharing"/>
+            <Link
+               className={'code-source'}
+               href={'https://github.com/SdevWeb7/ChallengeLinks'}
+               target={'_blank'}>
+               Code Source</Link>
+
             <h3>Technologies</h3>
             <ul>
                <li><strong>- Symfony:</strong> Authentification par JSON, Entities, Controllers, Repositories, EventListener, Intégration de React (+ React-Router), MessagesBus, Serializer, Twig, Yaml</li>
@@ -91,6 +111,12 @@ export function ProjectsFullStack () {
          <div className="goodfood">
             <p>Petit challenge perso</p>
             <img src="fullstack/goodfood.jpg" alt="goodfood"/>
+            <Link
+               className={'code-source'}
+               href={'https://github.com/SdevWeb7/GoodFood'}
+               target={'_blank'}>
+               Code Source</Link>
+
             <h3>Technologies</h3>
             <ul>
                <li><strong>- Symfony:</strong> Authentification par JSON, Entities, Controllers, Repositories, EventListener, Intégration de React (+ React-Router), MessagesBus, Serializer, Twig, Yaml</li>

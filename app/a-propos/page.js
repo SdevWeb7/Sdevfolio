@@ -19,7 +19,7 @@ export default function About () {
       <section id="intro">
          <h3>Intro</h3>
          <article className={"intro"}>
-            <p>En suivant 12 heures par jour de tutoriels sur internet (notamment Grafikart.fr) pendant 1 an et demi, et étant passionné, je me devais de m'initié au plus grand nombres de technologies actuellement disponible sur le marché (listées plus bas). Après cela j'ai décidé de me spécifié dans certains domaines (listés aussi plus bas). J'ai par la suite validé mes compétences en obtenant une certification de niveau Bac+2 à la 3W Academy, me voila officiellement développeur full-stack (junior).</p>
+            <p>Après avoir suivi des centaines d'heures de tutoriels afin de faire le tour des technologies avant de faire mon choix (C, C++, Python, Java, SQL, Html/CSS, Javascript, Php, ReactJS, Symfony, Angular, Svelte, VueJS, Bootstrap, TailwindCSS), mes deux stacks favorites sont NextJS (NodeJS et ReactJS) et Symfony en mode API consommé par ReactJS.</p>
          </article>
       </section>
 
@@ -30,23 +30,10 @@ export default function About () {
          </Link>
          {langSection && <article>
             <ul>
-               <li>- Principaux :
-                  <ul className={'second-list'}>
-                     <li>- HTML, CSS (et SASS)</li>
-                     <li>- Javascript</li>
-                     <li>- Php</li>
-                  </ul>
-               </li>
-               <li>- Autres :
-                  <ul className={'second-list'}>
-                     <li>- C, C++</li>
-                     <li>- Python</li>
-                     <li>- Java</li>
-                  </ul>
-               </li>
-
+               <li>- HTML, CSS (et SASS)</li>
+               <li>- Javascript</li>
+               <li>- Php</li>
             </ul>
-
          </article>}
       </section>
 
