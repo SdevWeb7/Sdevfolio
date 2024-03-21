@@ -7,8 +7,16 @@ export default function Home() {
 
      <p>Développeur full-stack passionné</p>
 
-     <Link href={'/projets'} className={'btn'}>Projets</Link>
-     <Link href={'/infos'} className={'btn'}>Infos</Link>
-     <Link href={'/a-propos'} className={'btn'}>À propos</Link>
+     <Link
+        href="/fullstack"
+        className={'btn'}>Full-Stack</Link>
+
+     <Link
+        href="/frontend"
+        className={'btn'}>Front-End</Link>
+
+     <Link
+        href={'/a-propos'}
+        className={'btn'}>À propos</Link>
     </main>
 }

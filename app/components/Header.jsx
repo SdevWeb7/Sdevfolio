@@ -12,9 +12,9 @@ export function Header () {
 
          <nav className={'nav-header'}>
             <ul>
-               <li><a href="/projets">Projets</a></li>
-               <li><a href="/infos">Infos</a></li>
-               <li><a href="/a-propos">À propos</a></li>
+               <li><Link href="/fullstack">Full-Stack</Link></li>
+               <li><Link href="/frontend">Front-End</Link></li>
+               <li><Link href="/a-propos">À propos</Link></li>
             </ul>
          </nav>
 

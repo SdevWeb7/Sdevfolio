@@ -12,17 +12,11 @@ export function ProjectsFrontEnd () {
 
 
 
-      return <><h3>Quelques projets Front-end</h3>
-
+      return <div className={'wrapper mt-12'}>
       <button
          onClick={() => setIndex(v => v > 0 ? v - 1 : v)}
          className="previous">
          <IconArrowLeft />
-      </button>
-      <button
-         onClick={() => setIndex(v => v < (nombreItems-1) ? v + 1 : v)}
-         className="next">
-         <IconArrowRight />
       </button>
 
       <section className="frontend">
@@ -30,7 +24,6 @@ export function ProjectsFrontEnd () {
             style={{transform: `translateX(-${index * 100}%)`}}
             className="diapo-container">
             <div className="payapi">
-               <p>Challenge du site web Front-end Mentor</p>
                <img src="frontend/payapi.jpg" alt="payapi"/>
                <Link
                   className={'code-source'}
@@ -43,15 +36,14 @@ export function ProjectsFrontEnd () {
                   target={'_blank'}>Site Live</Link>
 
                <h3>Technologies</h3>
-               <ul>
-                  <li><strong>- Vite</strong></li>
-                  <li>ReactJS: React-router</li>
-                  <li>TailwindCSS</li>
-               </ul>
+               <div className="technos">
+                  <p>Vite</p>
+                  <p>ReactJS</p>
+                  <p>TailwindCSS</p>
+               </div>
             </div>
 
             <div className="sneakers">
-               <p>Challenge du site web Front-end Mentor</p>
                <img src="frontend/sneakers.jpg" alt="sneakers"/>
                <Link
                   className={'code-source'}
@@ -64,15 +56,14 @@ export function ProjectsFrontEnd () {
                   target={'_blank'}>Site Live</Link>
 
                <h3>Technologies</h3>
-               <ul>
-                  <li><strong>- Vite</strong></li>
-                  <li>ReactJS: React-router</li>
-                  <li>TailwindCSS</li>
-               </ul>
+               <div className="technos">
+                  <p>Vite</p>
+                  <p>ReactJS</p>
+                  <p>TailwindCSS</p>
+               </div>
             </div>
 
             <div className="spacex">
-               <p>Challenge du site web Front-end Mentor</p>
                <img src="frontend/spacex.jpg" alt="spacex"/>
                <Link
                   className={'code-source'}
@@ -85,15 +76,14 @@ export function ProjectsFrontEnd () {
                   target={'_blank'}>Site Live</Link>
 
                <h3>Technologies</h3>
-               <ul>
-                  <li><strong>- Vite</strong></li>
-                  <li>ReactJS: React-router</li>
-                  <li>TailwindCSS</li>
-               </ul>
+               <div className="technos">
+                  <p>Vite</p>
+                  <p>ReactJS</p>
+                  <p>TailwindCSS</p>
+               </div>
             </div>
 
             <div className="designo">
-               <p>Challenge du site web Front-end Mentor</p>
                <img src="frontend/designo.jpg" alt="designo"/>
                <Link
                   className={'code-source'}
@@ -106,13 +96,19 @@ export function ProjectsFrontEnd () {
                   target={'_blank'}>Site Live</Link>
 
                <h3>Technologies</h3>
-               <ul>
-                  <li><strong>- Vite</strong></li>
-                  <li>ReactJS: React-router</li>
-                  <li>TailwindCSS</li>
-               </ul>
+               <div className="technos">
+                  <p>Vite</p>
+                  <p>ReactJS</p>
+                  <p>TailwindCSS</p>
+               </div>
             </div>
          </article>
 
-      </section></>
+      </section>
+         <button
+            onClick={() => setIndex(v => v < (nombreItems-1) ? v + 1 : v)}
+            className="next">
+            <IconArrowRight />
+         </button>
+      </div>
 }

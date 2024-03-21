@@ -15,10 +15,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Pacifico&display=swap');
 
-html {font-size: 62.5%; scroll-behavior: smooth;}
+html { font-size: 62.5%; }
 
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   * {
     font-family: "Gluten";

@@ -61,7 +61,7 @@ export default function About () {
                   <ul className={'second-list'}>
                      <li>- Entities, Controllers, Repositories</li>
                      <li>- Authentification (Forms et JSON)</li>
-                     <li>- Events, MessagesBus</li>
+                     <li>- Serializer, Events, MessagesBus</li>
                      <li>- Twig, Yaml</li>
                   </ul>
                </li>
@@ -77,13 +77,14 @@ export default function About () {
          </Link>
          {outilsSection && <article>
             <ul>
-               <li>- Sass</li>
+               <li>- Sass (SCSS)</li>
                <li>- Git (Github)</li>
                <li>- Npm (ou pnpm)</li>
                <li>- Figma</li>
                <li>- PhpStorm</li>
                <li>- React-Hook-Form</li>
-               <li>- React-Query</li>
+               <li>- React-Query (ou en NextJS les servers Actions)</li>
+               <li>- Prisma</li>
                <li>- Yup</li>
             </ul>
          </article>}

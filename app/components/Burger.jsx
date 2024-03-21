@@ -31,7 +31,7 @@ export function Burger () {
             <IconBurger />
          </Link>}
 
-      {isOpenMenu && <MenuBurger />}
+      {isOpenMenu && <MenuBurger setIsOpen={setIsOpenMenu} />}
 
    </nav>
 }

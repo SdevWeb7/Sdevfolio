@@ -1,12 +1,20 @@
 .projets {
   text-align: center;
 
+  *:not(h2) {
+    font-family: "Roboto Condensed", sans-serif;
+  }
   h3 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    font-weight: bolder;
+    text-decoration: underline;
+    margin: 1rem 0;
   }
-  .previous {
-    margin-right: 4rem;
+  .previous svg, .next svg {
+    width: 30px;
+    height: 30px;
+
+    &:hover {color: darkblue; transform: scale(1.05)}
   }
   .diapo-container {
     display: flex;
@@ -16,14 +24,17 @@
       min-width: 100%;
     }
   }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
   .fullstack, .frontend {
     max-width: 500px;
-    margin: 2rem auto;
     overflow: hidden;
-  }
-  p {
-    margin: 1rem;
-    font-size: 1.5rem;
+    align-items: center;
+    margin-top: 3rem;
   }
   img {
     border-radius: 1rem;
@@ -31,17 +42,84 @@
   article div {
     position: relative;
   }
+
+  .technos {
+    display: flex;
+    gap: 1rem;
+    align-items: stretch;
+
+    & > div {
+      min-width: unset;
+      flex: 1;
+    }
+    h5 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
   .code-source, .site-live {
     font-size: 1.5rem;
     position: absolute;
-    top: 4rem;
+    top: 0;
     right: 0;
-    background-color: white;
+    background-color: darkblue;
+    color: white;
     box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     padding: .5rem 1rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: black;
+      background-color: white;
+    }
   }
   .site-live {
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: unset;
+    border-top-right-radius: unset;
+    border-top-left-radius: 1rem;
     right: unset;
     left: 0;
+  }
+}
+.fonctionnalites {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.fonctionnalites span, .technos p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    font-size: 1.3rem;
+    background-color: darkblue;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
+}
+.technos p {
+  width: 100%;
+}
+@media screen and (max-width: 600px){
+  .projets {
+
+    .technos {
+      flex-direction: column;
+    }
+
+    .fonctionnalites {
+      span {
+        width: 90%;
+      }
+    }
   }
 }
