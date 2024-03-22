@@ -1,7 +1,5 @@
 "use client"
 
-import { IconArrowLeft } from "@/app/svg/IconArrowLeft";
-import { IconArrowRight } from "@/app/svg/IconArrowRight";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -11,20 +9,21 @@ export function ProjectsFullStack () {
 
 
 
-   return <>
-      <div className="wrapper">
-         <button
-            onClick={() => setIndex(v => v > 0 ? v - 1 : v)}
-            className="previous">
-            <IconArrowLeft />
-         </button>
-      <section className="fullstack">
+   return <><article className="diapo-container">
 
-         <article
-            style={{transform: `translateX(-${index * 100}%)`}}
-            className="diapo-container">
+            <button
+               onClick={() => setIndex(v => v > 0 ? v - 1 : v)}
+               className="previous">&lt;
+            </button>
+            <button
+               onClick={() => setIndex(v => v < (nombreItems-1) ? v + 1 : v)}
+               className="next">&gt;
+            </button>
 
-            <div className="sdevweb7">
+            <div
+               className="sdevweb7"
+               style={{transform: `translateX(-${index * 100}%)`}}>
+
                <img src="fullstack/sdevweb7.jpg" alt="sdevweb7"/>
                <Link
                   className={'code-source'}
@@ -36,7 +35,6 @@ export function ProjectsFullStack () {
                   href={'https://sdevweb.com/'}
                   target={'_blank'}>Site Live</Link>
 
-               <h3>Technologies</h3>
                <div className="technos">
                   <div>
                      <h5>Symfony</h5>
@@ -52,7 +50,6 @@ export function ProjectsFullStack () {
                   </div>
                </div>
 
-               <h3>Fonctionnalités</h3>
                <div className="fonctionnalites">
                   <span>Authentification</span>
                   <span>Création sous forme d'API</span>
@@ -63,7 +60,10 @@ export function ProjectsFullStack () {
 
             </div>
 
-            <div className="youtube">
+            <div
+               className="youtube"
+               style={{transform: `translateX(-${index * 100}%)`}}>
+
                <img src="fullstack/youtube.jpg" alt="youtube"/>
                <Link
                   className={'code-source'}
@@ -71,7 +71,6 @@ export function ProjectsFullStack () {
                   target={'_blank'}>
                   Code Source</Link>
 
-               <h3>Technologies</h3>
                <div className="technos">
                   <div>
                      <h5>NextJS</h5>
@@ -83,7 +82,6 @@ export function ProjectsFullStack () {
                   </div>
                </div>
 
-               <h3>Fonctionnalités</h3>
                <div className="fonctionnalites">
                   <span>Authentification (E-mail, Google et Github)</span>
                   <span>CRUD Vidéos avec react-hook-form + yup validation</span>
@@ -93,7 +91,10 @@ export function ProjectsFullStack () {
                </div>
             </div>
 
-            <div className="linksharing">
+            <div
+               className="linksharing"
+               style={{transform: `translateX(-${index * 100}%)`}}>
+
                <img src="fullstack/linksharing.jpg" alt="linksharing"/>
                <Link
                   className={'code-source'}
@@ -101,7 +102,6 @@ export function ProjectsFullStack () {
                   target={'_blank'}>
                   Code Source</Link>
 
-               <h3>Technologies</h3>
                <div className="technos">
                   <div>
                      <h5>Symfony</h5>
@@ -117,7 +117,6 @@ export function ProjectsFullStack () {
                   </div>
                </div>
 
-               <h3>Fonctionnalités</h3>
                <div className="fonctionnalites">
                   <span>Authentification</span>
                   <span>Création sous forme d'API</span>
@@ -125,7 +124,10 @@ export function ProjectsFullStack () {
                </div>
             </div>
 
-            <div className="goodfood">
+            <div
+               className="goodfood"
+               style={{transform: `translateX(-${index * 100}%)`}}>
+
                <img src="fullstack/goodfood.jpg" alt="goodfood"/>
                <Link
                   className={'code-source'}
@@ -133,7 +135,6 @@ export function ProjectsFullStack () {
                   target={'_blank'}>
                   Code Source</Link>
 
-               <h3>Technologies utilisées</h3>
                <div className="technos">
                   <div>
                      <h5>Symfony</h5>
@@ -149,7 +150,6 @@ export function ProjectsFullStack () {
                   </div>
                </div>
 
-               <h3>Fonctionnalités</h3>
                <div className="fonctionnalites">
                   <span>Authentification</span>
                   <span>Création sous forme d'API</span>
@@ -160,13 +160,5 @@ export function ProjectsFullStack () {
                   <span>Dark/Light Mode</span>
                </div>
             </div>
-         </article>
-      </section>
-
-         <button
-            onClick={() => setIndex(v => v < (nombreItems-1) ? v + 1 : v)}
-            className="next">
-            <IconArrowRight />
-         </button>
-      </div></>
+         </article></>
 }

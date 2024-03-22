@@ -1,27 +1,41 @@
 .projets {
   text-align: center;
 
-  *:not(h2) {
-    font-family: "Roboto Condensed", sans-serif;
-  }
-  h3 {
-    font-size: 2rem;
-    font-weight: bolder;
-    text-decoration: underline;
-    margin: 1rem 0;
-  }
-  .previous svg, .next svg {
-    width: 30px;
-    height: 30px;
+  *:not(h2) { font-family: "Roboto Condensed", sans-serif; }
 
-    &:hover {color: darkblue; transform: scale(1.05)}
+  .previous, .next {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    color: darkblue;
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    z-index: 10000;
+
+    &:hover {
+      color: white;
+      background-color: darkblue;
+      transform: scale(1.05);
+    }
+  }
+  .next {
+    left: unset;
+    right: 0;
   }
   .diapo-container {
+    border: 1px solid black;
+    position: relative;
+    max-width: 500px;
+    overflow: hidden;
+    align-items: center;
+    margin: 3rem auto 0 auto;
     display: flex;
-    transition: all .5s ease-in-out;
+    align-items: start;
+    transition: all .3s ease-in-out;
 
     div {
       min-width: 100%;
+      transition: all 1s ease-in-out;
     }
   }
   .wrapper {
@@ -30,12 +44,7 @@
     justify-content: center;
     gap: 1rem;
   }
-  .fullstack, .frontend {
-    max-width: 500px;
-    overflow: hidden;
-    align-items: center;
-    margin-top: 3rem;
-  }
+
   img {
     border-radius: 1rem;
   }
@@ -69,8 +78,6 @@
     background-color: darkblue;
     color: white;
     box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
-    border-bottom-left-radius: 1rem;
-    border-top-right-radius: 1rem;
     padding: .5rem 1rem;
     transition: all .3s ease-in-out;
 
@@ -80,10 +87,6 @@
     }
   }
   .site-live {
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: unset;
-    border-top-right-radius: unset;
-    border-top-left-radius: 1rem;
     right: unset;
     left: 0;
   }
@@ -103,7 +106,6 @@
     background-color: darkblue;
     color: white;
     padding: 1rem;
-    border-radius: 1rem;
     box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
 }
 .technos p {

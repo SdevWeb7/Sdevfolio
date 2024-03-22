@@ -12,18 +12,24 @@ export function ProjectsFrontEnd () {
 
 
 
-      return <div className={'wrapper mt-12'}>
-      <button
-         onClick={() => setIndex(v => v > 0 ? v - 1 : v)}
-         className="previous">
-         <IconArrowLeft />
-      </button>
+      return <article className="diapo-container">
 
-      <section className="frontend">
-         <article
-            style={{transform: `translateX(-${index * 100}%)`}}
-            className="diapo-container">
-            <div className="payapi">
+            <button
+               onClick={() => setIndex(v => v > 0 ? v - 1 : v)}
+               className="previous">
+               <IconArrowLeft />
+            </button>
+            <button
+               onClick={() => setIndex(v => v < (nombreItems-1) ? v + 1 : v)}
+               className="next">
+               <IconArrowRight />
+            </button>
+
+
+            <div
+               className="payapi"
+               style={{transform: `translateX(-${index * 100}%)`}}>
+
                <img src="frontend/payapi.jpg" alt="payapi"/>
                <Link
                   className={'code-source'}
@@ -35,7 +41,6 @@ export function ProjectsFrontEnd () {
                   href={'https://sdevweb7.github.io/PayApi'}
                   target={'_blank'}>Site Live</Link>
 
-               <h3>Technologies</h3>
                <div className="technos">
                   <p>Vite</p>
                   <p>ReactJS</p>
@@ -43,7 +48,10 @@ export function ProjectsFrontEnd () {
                </div>
             </div>
 
-            <div className="sneakers">
+            <div
+               className="sneakers"
+               style={{transform: `translateX(-${index * 100}%)`}}>
+
                <img src="frontend/sneakers.jpg" alt="sneakers"/>
                <Link
                   className={'code-source'}
@@ -55,7 +63,6 @@ export function ProjectsFrontEnd () {
                   href={'https://sdevweb7.github.io/Sneakers'}
                   target={'_blank'}>Site Live</Link>
 
-               <h3>Technologies</h3>
                <div className="technos">
                   <p>Vite</p>
                   <p>ReactJS</p>
@@ -63,7 +70,10 @@ export function ProjectsFrontEnd () {
                </div>
             </div>
 
-            <div className="spacex">
+            <div
+               className="spacex"
+               style={{transform: `translateX(-${index * 100}%)`}}>
+
                <img src="frontend/spacex.jpg" alt="spacex"/>
                <Link
                   className={'code-source'}
@@ -75,7 +85,6 @@ export function ProjectsFrontEnd () {
                   href={'https://sdevweb7.github.io/SpaceX'}
                   target={'_blank'}>Site Live</Link>
 
-               <h3>Technologies</h3>
                <div className="technos">
                   <p>Vite</p>
                   <p>ReactJS</p>
@@ -83,7 +92,10 @@ export function ProjectsFrontEnd () {
                </div>
             </div>
 
-            <div className="designo">
+            <div
+               className="designo"
+               style={{transform: `translateX(-${index * 100}%)`}}>
+
                <img src="frontend/designo.jpg" alt="designo"/>
                <Link
                   className={'code-source'}
@@ -95,7 +107,6 @@ export function ProjectsFrontEnd () {
                   href={'https://sdevweb7.github.io/Designo'}
                   target={'_blank'}>Site Live</Link>
 
-               <h3>Technologies</h3>
                <div className="technos">
                   <p>Vite</p>
                   <p>ReactJS</p>
@@ -103,12 +114,4 @@ export function ProjectsFrontEnd () {
                </div>
             </div>
          </article>
-
-      </section>
-         <button
-            onClick={() => setIndex(v => v < (nombreItems-1) ? v + 1 : v)}
-            className="next">
-            <IconArrowRight />
-         </button>
-      </div>
 }
