@@ -31,3 +31,15 @@
 }
 
 a:hover { color: darkblue }
+
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: #d3d1d1;; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #64766A; /* creates padding around scroll thumb */
+}
