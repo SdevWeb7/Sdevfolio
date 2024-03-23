@@ -27,6 +27,7 @@
   box-shadow: rgba(25, 25, 25, .04) -2px -2px 1px 0, rgba(0, 0, 0, .1) -2px -3px 4px 0;
   border-radius: .5rem;
   padding: 1rem 1.5rem;
+  z-index: 999;
 }
 
 a:hover { color: darkblue }

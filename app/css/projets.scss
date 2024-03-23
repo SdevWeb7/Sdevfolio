@@ -6,11 +6,11 @@
   .previous, .next {
     position: absolute;
     left: 0;
-    top: 10%;
+    top: 40%;
     color: darkblue;
     font-size: 3rem;
     padding: 1rem 2rem;
-    z-index: 10000;
+    z-index: 10;
 
     &:hover {
       color: white;
@@ -23,105 +23,105 @@
     right: 0;
   }
   .diapo-container {
-    border: 1px solid black;
     position: relative;
-    max-width: 500px;
-    overflow: hidden;
+    max-width: 700px;
+    overflow-x: hidden;
+    overflow-y: visible;
     align-items: center;
     margin: 3rem auto 0 auto;
     display: flex;
     align-items: start;
     transition: all .3s ease-in-out;
+    box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
 
     div {
+      position: relative;
       min-width: 100%;
       transition: all 1s ease-in-out;
     }
   }
-  .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
 
-  img {
-    border-radius: 1rem;
-  }
-  article div {
-    position: relative;
-  }
+  img { border-radius: 1rem; }
 
-  .technos {
-    display: flex;
-    gap: 1rem;
-    align-items: stretch;
+  article div { position: relative; }
 
-    & > div {
-      min-width: unset;
-      flex: 1;
-    }
-    h5 {
-      font-size: 2rem;
-      font-weight: bold;
-    }
-    p {
-      font-size: 1.3rem;
-    }
-  }
-
-  .code-source, .site-live {
+  .code-source, .site-live, .details-button {
     font-size: 1.5rem;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: darkblue;
+    background-color: black;
     color: white;
     box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
     padding: .5rem 1rem;
     transition: all .3s ease-in-out;
+    z-index: 900;
 
     &:hover {
-      color: black;
-      background-color: white;
+      background-color: darkblue;
     }
   }
   .site-live {
     right: unset;
     left: 0;
   }
+  .details-button {
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 0;
+  }
+  .technos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    h5 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
 }
+
 .fonctionnalites {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
+.details {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  z-index: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem;
+}
 .fonctionnalites span, .technos p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    font-size: 1.3rem;
-    background-color: darkblue;
-    color: white;
+    font-size: 1.1rem;
     padding: 1rem;
-    box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 3px 4px 0;
+    box-shadow: rgba(25, 25, 25, .04) 0 0 1px 0, rgba(0, 0, 0, .1) 0 0px 4px 0;
 }
-.technos p {
-  width: 100%;
+.front-technos {
+  &.technos {
+    gap: 3rem;
+  }
+  p {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
 }
-@media screen and (max-width: 600px){
-  .projets {
 
-    .technos {
-      flex-direction: column;
-    }
+@media screen and (max-width: 800px) {
+  .front-technos {
+    flex-direction: column;
+    justify-content: center;
 
-    .fonctionnalites {
-      span {
-        width: 90%;
-      }
-    }
+    &.technos { gap: 0; }
   }
 }

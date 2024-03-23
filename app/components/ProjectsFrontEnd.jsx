@@ -6,10 +6,9 @@ import { IconArrowRight } from "@/app/svg/IconArrowRight";
 import Link from "next/link";
 
 export function ProjectsFrontEnd () {
-
       const [index, setIndex] = useState(0)
+      const [showDetails, setShowDetails] = useState(false)
       const nombreItems = 4
-
 
 
       return <article className="diapo-container">
@@ -41,11 +40,22 @@ export function ProjectsFrontEnd () {
                   href={'https://sdevweb7.github.io/PayApi'}
                   target={'_blank'}>Site Live</Link>
 
-               <div className="technos">
+               <Link
+                  href={'#'}
+                  className={'details-button'}
+                  onClick={e => {
+                     e.preventDefault()
+                     setShowDetails(v => !v)
+                  }}>
+                  {showDetails ? "Screenshot" : "Details"}</Link>
+
+               {showDetails && <section className="details">
+               <div className="technos front-technos">
                   <p>Vite</p>
                   <p>ReactJS</p>
                   <p>TailwindCSS</p>
                </div>
+               </section>}
             </div>
 
             <div
@@ -63,11 +73,22 @@ export function ProjectsFrontEnd () {
                   href={'https://sdevweb7.github.io/Sneakers'}
                   target={'_blank'}>Site Live</Link>
 
-               <div className="technos">
+               <Link
+                  href={'#'}
+                  className={'details-button'}
+                  onClick={e => {
+                     e.preventDefault()
+                     setShowDetails(v => !v)
+                  }}>
+                  {showDetails ? "Screenshot" : "Details"}</Link>
+
+               {showDetails && <section className="details">
+               <div className="technos front-technos">
                   <p>Vite</p>
                   <p>ReactJS</p>
                   <p>TailwindCSS</p>
                </div>
+               </section>}
             </div>
 
             <div
@@ -85,11 +106,22 @@ export function ProjectsFrontEnd () {
                   href={'https://sdevweb7.github.io/SpaceX'}
                   target={'_blank'}>Site Live</Link>
 
-               <div className="technos">
+               <Link
+                  href={'#'}
+                  className={'details-button'}
+                  onClick={e => {
+                     e.preventDefault()
+                     setShowDetails(v => !v)
+                  }}>
+                  {showDetails ? "Screenshot" : "Details"}</Link>
+
+               {showDetails && <section className="details">
+               <div className="technos front-technos">
                   <p>Vite</p>
                   <p>ReactJS</p>
                   <p>TailwindCSS</p>
                </div>
+               </section>}
             </div>
 
             <div
@@ -107,11 +139,22 @@ export function ProjectsFrontEnd () {
                   href={'https://sdevweb7.github.io/Designo'}
                   target={'_blank'}>Site Live</Link>
 
-               <div className="technos">
+               <Link
+                  href={'#'}
+                  className={'details-button'}
+                  onClick={e => {
+                     e.preventDefault()
+                     setShowDetails(v => !v)
+                  }}>
+                  {showDetails ? "Screenshot" : "Details"}</Link>
+
+               {showDetails && <section className="details">
+               <div className="technos front-technos">
                   <p>Vite</p>
                   <p>ReactJS</p>
                   <p>TailwindCSS</p>
                </div>
+               </section>}
             </div>
          </article>
 }
