@@ -1,0 +1,21 @@
+.details-front {
+  display: flex;
+  background-color: #222;
+  color: white;
+  justify-content: space-around;
+  padding: .9rem;
+  border-bottom-right-radius: .2rem;
+  border-bottom-left-radius: .2rem;
+}
+.front {
+  .site-live {
+    left: 0;
+    right: unset;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .details-front {
+    flex-direction: column;
+  }
+}

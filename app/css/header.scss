@@ -37,6 +37,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
   animation: menuBurgerSlideIn .5s ease-in-out forwards;
+  z-index: 10000;
 
   a {
     font-size: 4rem;

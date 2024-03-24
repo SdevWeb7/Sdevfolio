@@ -13,7 +13,7 @@ export default function About () {
 
    return <main className={'a-propos'}>
 
-      <h2>À propos</h2>
+      <h2 id={'top'}>À propos</h2>
 
 
       <section id="intro">

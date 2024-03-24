@@ -1,0 +1,36 @@
+.projets {
+
+  .details-fullstack {
+    min-height: 100%;
+    position: absolute;
+    inset: 0;
+    bottom: unset;
+    background-color: white;
+    padding: 5rem;
+
+    p { font-size: 1.4rem; }
+  }
+
+  .technos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    div {
+      border-bottom: 1px solid black;
+
+    }
+
+    h5 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  .features {
+    margin-top: 3rem;
+    color: green;
+    border: 1px solid green;
+  }
+
+}

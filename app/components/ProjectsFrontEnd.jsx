@@ -7,17 +7,18 @@ import Link from "next/link";
 
 export function ProjectsFrontEnd () {
       const [index, setIndex] = useState(0)
-      const [showDetails, setShowDetails] = useState(false)
+      const listProjects = ['PayApi', 'Designo', 'SpaceX', 'Sneakers']
       const nombreItems = 4
 
 
-      return <article className="diapo-container">
+      return <section className="diapo-container front">
 
             <button
                onClick={() => setIndex(v => v > 0 ? v - 1 : v)}
                className="previous">
                <IconArrowLeft />
             </button>
+
             <button
                onClick={() => setIndex(v => v < (nombreItems-1) ? v + 1 : v)}
                className="next">
@@ -25,136 +26,32 @@ export function ProjectsFrontEnd () {
             </button>
 
 
-            <div
-               className="payapi"
-               style={{transform: `translateX(-${index * 100}%)`}}>
+            <article>
+                  <img
+                     className={'img-project'}
+                     src={`frontend/${listProjects[index]}.jpg`}
+                     alt={listProjects[index]} />
 
-               <img src="frontend/payapi.jpg" alt="payapi"/>
-               <Link
-                  className={'code-source'}
-                  href={'https://github.com/SdevWeb7/PayApi'}
-                  target={'_blank'}>
-                  Code Source</Link>
-               <Link
-                  className={'site-live'}
-                  href={'https://sdevweb7.github.io/PayApi'}
-                  target={'_blank'}>Site Live</Link>
+                  <Link
+                     className={'code-source'}
+                     href={`https://github.com/SdevWeb7/${listProjects[index]}`}
+                     target={'_blank'}>
+                        Code Source</Link>
 
-               <Link
-                  href={'#'}
-                  className={'details-button'}
-                  onClick={e => {
-                     e.preventDefault()
-                     setShowDetails(v => !v)
-                  }}>
-                  {showDetails ? "Screenshot" : "Details"}</Link>
+                  <Link
+                     className={'site-live'}
+                     href={`https://sdevweb7.github.io/${listProjects[index]}`}
+                     target={'_blank'}>Site Live</Link>
 
-               {showDetails && <section className="details">
-               <div className="technos front-technos">
-                  <p>Vite</p>
-                  <p>ReactJS</p>
-                  <p>TailwindCSS</p>
-               </div>
-               </section>}
-            </div>
 
-            <div
-               className="sneakers"
-               style={{transform: `translateX(-${index * 100}%)`}}>
+                  <section className="details-front">
+                        <p>Vite</p>
+                        <p>ReactJS</p>
+                        <p>TailwindCSS</p>
+                  </section>
 
-               <img src="frontend/sneakers.jpg" alt="sneakers"/>
-               <Link
-                  className={'code-source'}
-                  href={'https://github.com/SdevWeb7/Sneakers'}
-                  target={'_blank'}>
-                  Code Source</Link>
-               <Link
-                  className={'site-live'}
-                  href={'https://sdevweb7.github.io/Sneakers'}
-                  target={'_blank'}>Site Live</Link>
+            </article>
 
-               <Link
-                  href={'#'}
-                  className={'details-button'}
-                  onClick={e => {
-                     e.preventDefault()
-                     setShowDetails(v => !v)
-                  }}>
-                  {showDetails ? "Screenshot" : "Details"}</Link>
 
-               {showDetails && <section className="details">
-               <div className="technos front-technos">
-                  <p>Vite</p>
-                  <p>ReactJS</p>
-                  <p>TailwindCSS</p>
-               </div>
-               </section>}
-            </div>
-
-            <div
-               className="spacex"
-               style={{transform: `translateX(-${index * 100}%)`}}>
-
-               <img src="frontend/spacex.jpg" alt="spacex"/>
-               <Link
-                  className={'code-source'}
-                  href={'https://github.com/SdevWeb7/SpaceX'}
-                  target={'_blank'}>
-                  Code Source</Link>
-               <Link
-                  className={'site-live'}
-                  href={'https://sdevweb7.github.io/SpaceX'}
-                  target={'_blank'}>Site Live</Link>
-
-               <Link
-                  href={'#'}
-                  className={'details-button'}
-                  onClick={e => {
-                     e.preventDefault()
-                     setShowDetails(v => !v)
-                  }}>
-                  {showDetails ? "Screenshot" : "Details"}</Link>
-
-               {showDetails && <section className="details">
-               <div className="technos front-technos">
-                  <p>Vite</p>
-                  <p>ReactJS</p>
-                  <p>TailwindCSS</p>
-               </div>
-               </section>}
-            </div>
-
-            <div
-               className="designo"
-               style={{transform: `translateX(-${index * 100}%)`}}>
-
-               <img src="frontend/designo.jpg" alt="designo"/>
-               <Link
-                  className={'code-source'}
-                  href={'https://github.com/SdevWeb7/Designo'}
-                  target={'_blank'}>
-                  Code Source</Link>
-               <Link
-                  className={'site-live'}
-                  href={'https://sdevweb7.github.io/Designo'}
-                  target={'_blank'}>Site Live</Link>
-
-               <Link
-                  href={'#'}
-                  className={'details-button'}
-                  onClick={e => {
-                     e.preventDefault()
-                     setShowDetails(v => !v)
-                  }}>
-                  {showDetails ? "Screenshot" : "Details"}</Link>
-
-               {showDetails && <section className="details">
-               <div className="technos front-technos">
-                  <p>Vite</p>
-                  <p>ReactJS</p>
-                  <p>TailwindCSS</p>
-               </div>
-               </section>}
-            </div>
-         </article>
+      </section>
 }
