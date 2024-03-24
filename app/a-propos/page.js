@@ -19,7 +19,7 @@ export default function About () {
       <section id="intro">
          <h3>Intro</h3>
          <article className={"intro"}>
-            <p>Après avoir suivi des centaines d'heures de tutoriels afin de faire le tour des technologies avant de faire mon choix (C, C++, Python, Java, SQL, Html/CSS, Javascript, Php, ReactJS, Symfony, Angular, Svelte, VueJS, Bootstrap, TailwindCSS), mes deux stacks favorites sont NextJS (NodeJS et ReactJS) et Symfony en mode API consommé par ReactJS.</p>
+            <p>Après avoir suivi des centaines d heures de tutoriels afin de faire le tour des technologies avant de faire mon choix (C, C++, Python, Java, SQL, Html/CSS, Javascript, Php, ReactJS, Symfony, Angular, Svelte, VueJS, Bootstrap, TailwindCSS), mes deux stacks favorites sont NextJS (NodeJS et ReactJS) et Symfony en mode API consommé par ReactJS.</p>
          </article>
       </section>
 
