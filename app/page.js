@@ -7,6 +7,7 @@ export default function Home() {
 
      <p>Développeur full-stack passionné</p>
 
+     <div className={'flex gap-8'}>
      <Link
         href="/fullstack"
         className={'btn'}>Full-Stack</Link>
@@ -14,7 +15,7 @@ export default function Home() {
      <Link
         href="/frontend"
         className={'btn'}>Front-End</Link>
-
+     </div>
      <Link
         href={'/a-propos'}
         className={'btn'}>À propos</Link>
